@@ -2,14 +2,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <img src="../graphics/lil-bub.jpg" alt="cats">
         <title>Highcharts Example</title>
         <!-- Button for testing bands-->
         <div id="container" style="height: 400px"></div>
         <button id="button" class="autocompare">Add plot band</button>
         
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script type="text/javascript" src="../js/scrollmagic/jquery.scrollmagic.js"></script>
+
         <script type="text/javascript">
-        var position = 1
+        
         
 $(function () {
     $('#container').highcharts({
@@ -20,13 +24,7 @@ $(function () {
             text: 'Endowment Returns'
         },
         xAxis:  {               
-            categories: ['1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013'],
-            plotLines: [{
-                    value: position,
-                    width: 1,
-                    color: 'red',
-                    id: 'plot-line'
-                }]
+            categories: ['1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013']
                 },
         yAxis: [{ // Primary yAxis
             labels: {
@@ -94,33 +92,32 @@ $(function () {
         }
         hasPlotBand = !hasPlotBand;
     });
-});
-    
+
+
+    var controller = new ScrollMagic();
+        // build scene
+        var scene = new ScrollScene({triggerElement: "#container", duration: 200})
+                        .addTo(controller)
+                        .on("start end", function (e) {
+                            if (!hasPlotBand) {
+                                chart.xAxis[0].addPlotBand({
+                                    from: 5.5,
+                                    to: 7.5,
+                                    color: '#FCFFC5',
+                                    id: 'plot-band-1'
+                                });
+                                $button.html('Remove plot band');
+                            } else {
+                                chart.xAxis[0].removePlotBand('plot-band-1');
+                                $button.html('Add plot band');
+                            }
+                            hasPlotBand = !hasPlotBand;
+                        });
 
     
-    var hasPlotBand = false,
-        chart = $('#container').highcharts(),
-        $button = $('#button');
-    
-    $button.click(function() {
-        if (!hasPlotBand) {
-            chart.xAxis[0].addPlotBand({
-                from: 5.5,
-                to: 7.5,
-                color: '#FCFFC5',
-                id: 'plot-band-1'
-            });
-            $button.html('Remove plot band');
-        } else {
-            chart.xAxis[0].removePlotBand('plot-band-1');
-            $button.html('Add plot band');
-        }
-        hasPlotBand = !hasPlotBand;
-    });
-});
     
             
-        
+     });   
 
         </script>
     </head>
