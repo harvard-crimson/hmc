@@ -113,7 +113,7 @@
                         })
                     .addTo(controller);
 
-                var scene2 = new ScrollScene({triggerElement: "#container"})
+                var scene2 = new ScrollScene({triggerElement: "#trig", triggerHook: 1})
                     .setPin("#container")
                     .addTo(controller);
             });
@@ -122,6 +122,7 @@
 <body>
     <img src="http://d2mtr37y39tpbu.cloudfront.net/wp-content/uploads/2013/05/Infographic_immigration-960x1440.jpg" alt="cats">
     <div id="container" style="height: 250px;"></div>
+    <div id="trig" style="height: 0ox;"></div>
         <!-- <button id="button" class="autocompare">Add plot band</button> -->
     <img src="http://d2mtr37y39tpbu.cloudfront.net/wp-content/uploads/2013/05/Infographic_immigration-960x1440.jpg" alt="cats">
 </body>
