@@ -32,6 +32,91 @@ a:hover {
     color: #478900;
 }
 
+.wrapper {
+    margin-left: 50px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(46,46,46,0.95);
+    z-index: 300;
+}
+
+.header-logo, .header-logo:hover {
+    float: left;
+    padding: 7px 0 9px;
+    text-decoration: none;
+}
+
+.header-logo img {
+    vertical-align: middle;
+}
+
+header h1 {
+    font-family: 'Crimson';
+    font-size: 20px;
+    color: white;
+    margin: 0 auto;
+}
+
+header ul {
+    float: left;
+    list-style: none;
+    padding-left: 40px;
+    margin: 0;
+    height: 100%;
+}
+
+header ul li {
+    padding: 0 20px;
+    line-height: 36px;
+    float: left;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    cursor: hand;
+    height: 100%;
+    vertical-align: middle;
+}
+
+header ul li:hover, header ul li.active {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+header ul li.inactive:hover {
+    background-color: #999;
+    color: white;
+    cursor: default;
+}
+
+.back-arrow {
+    height: 23px;
+    float: left;
+    position: relative;
+    top: 7px;
+}
+
+@media (max-width: 720px) {
+    header ul {
+        width: 100%;
+    }
+}
+
+@media (max-width: 475px) {
+    header {
+        position: absolute;
+    }
+
+    header ul li {
+        display: none;
+    }
+}
+
+
 .bebas {
     font-family: "Bebas";
     word-spacing: 0.2em;
@@ -60,17 +145,6 @@ h1 .bebas {
 
 .type-target {
 	line-height: 1em;
-}
-
-#header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: auto;
-    padding: 7px 10px;
-    background-color: rgba(0,0,0,0.8);
-    z-index: 10;
-    font-size: 1.4em;
 }
 
 .animate-shadow {
