@@ -6,13 +6,14 @@ $(document).ready(function () {
                 animation: {
                     duration: 2000,
                     easing: 'swing'
-
                 }
             }
         },
         chart: {
             renderTo: container,
             backgroundColor: 'rgba(255,255,255,.3)',
+            width: $(window).width(),
+            height: $(window).height()
         },
         title: {
             text: 'Endowment Returns',
@@ -92,11 +93,7 @@ $(document).ready(function () {
             color: '#000'
         }],
     });
-    chart.setSize(
-           $(window).width(), 
-           $(window).height(),
-           false
-        ); 
+
     $(window).resize(function() 
     {    
         chart.setSize(
@@ -116,8 +113,7 @@ $(document).ready(function () {
             color: '#fff',
         });
         chart.redraw();
-        console.log('hi');
-    }, 4000);
+    }, 2500);
 
 
     var hasPlotBand = false;
