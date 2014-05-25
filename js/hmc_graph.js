@@ -1,5 +1,6 @@
 var controller;
 $(document).ready(function () {
+    height_top=$('#article-header').height()+$('header').height()+parseInt($('.pt-serif').css('margin-top'));
     var chart = new Highcharts.Chart({
         plotOptions: {
             series: {
@@ -11,9 +12,9 @@ $(document).ready(function () {
         },
         chart: {
             renderTo: container,
-            backgroundColor: 'rgba(255,255,255,.3)',
+            backgroundColor: 'rgba(255,255,255,1)',
             width: $(window).width(),
-            height: $(window).height()
+            height: $(window).height()-height_top
         },
         title: {
             text: 'Endowment Returns',
@@ -115,6 +116,7 @@ $(document).ready(function () {
         chart.redraw();
     }, 2500);
 
+    $('#article').css('margin-bottom', 220.0 + 'px');
 
     var hasPlotBand = false;
     var $button = $('#button');
@@ -136,4 +138,5 @@ $(document).ready(function () {
                 hasPlotBand = !hasPlotBand;
             })
         .addTo(controller);
+
 });
