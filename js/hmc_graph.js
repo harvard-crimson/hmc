@@ -1,6 +1,6 @@
 var controller;
 $(document).ready(function () {
-    height_top=$('#article-header').height()+$('header').height()+parseInt($('.pt-serif').css('margin-top'));
+    height_top=$('#article-header').height()+$('header').height()//+parseInt($('.pt-serif').css('margin-top'));
     var chart = new Highcharts.Chart({
         plotOptions: {
             series: {

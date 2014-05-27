@@ -309,7 +309,8 @@ h1 .pt-serif {
 }
 
 #article-header {
-    background-size: cover;
+    height: 300px;
+    background-size:cover;
     background-image: url("http://survivalguideforsmallbusiness.com/wp-content/uploads/2010/11/bank-building.jpg")
 }
 
