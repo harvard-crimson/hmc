@@ -19,7 +19,7 @@ body {
 }
 
 a {
-    color: #7ABC00;
+    /*color: #7ABC00;*/
     text-decoration: none;
 
     -webkit-transition: color 0.1s ease-in;
@@ -128,12 +128,14 @@ header ul li.inactive:hover {
     z-index: 99;
 }
 
-h1 .pt-serif {
-	margin-top: 50px;
+header > h1 .pt-serif {
+	/*margin-top: 50px;*/
+    /*margin-right: 5000px;*/
 }
 
 .lora{
-    font-family: 'Lora', serif;
+    font-family: 'Lora', 'sans-serif';
+    font-size: 
 }
 
 .intro {
@@ -280,6 +282,7 @@ h1 .pt-serif {
 #article .byline {
     text-align: center;
     font-style: italic;
+    font-size:20px;
 }
 
 #article .byline > a {
@@ -375,6 +378,9 @@ h1 .pt-serif {
     #right {
         width: 33.5%;
     }
+    .byline {
+        font-size: 1.3em;
+    }
 }
 
 @media (max-width: 700px) {
@@ -390,6 +396,9 @@ h1 .pt-serif {
     }
     #right {
         width: 25%;
+    }
+    .byline {
+        font-size: 1.1em;
     }
 }
 
