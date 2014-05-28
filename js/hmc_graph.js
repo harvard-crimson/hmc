@@ -1,6 +1,6 @@
 var controller;
 $(document).ready(function () {
-    height_top=$('#article-header').height()+$('header').height()//+parseInt($('.pt-serif').css('margin-top'));
+    height_top=$('#article-header').height()
     var chart = new Highcharts.Chart({
         plotOptions: {
             series: {
@@ -12,9 +12,9 @@ $(document).ready(function () {
         },
         chart: {
             renderTo: container,
-            backgroundColor: 'rgba(255,255,255,1)',
+            backgroundColor: 'rgba(255,255,255,0)',
             width: $(window).width(),
-            height: $(window).height()-height_top
+            height: $(window).height()-$('header').height()//-$('#article-header').height()
         },
         title: {
             text: 'Endowment Returns',
@@ -43,7 +43,7 @@ $(document).ready(function () {
             ceiling: 30,
             floor: -30,
             tickInterval: 10,
-            gridLineColor:'rgba(0,0,0,0)',
+            gridLineColor:'rgba(0,0,0,.03)',
             title: {
                 text: 'Yearly Returns',
                 style: {
@@ -107,8 +107,10 @@ $(document).ready(function () {
     setTimeout(function() {
         chart.setSize(
            $(window).width(), 
-           220.0,
-           true
+           $(window).height()-$('#article-header').height(),
+           animation= {
+                    duration: 1200
+                }
         );
         chart.chartBackground.css({
             color: '#fff',
@@ -117,6 +119,7 @@ $(document).ready(function () {
     }, 2500);
 
     $('#article').css('margin-bottom', 220.0 + 'px');
+    $('#article-header').css('height', '456px')
 
     var hasPlotBand = false;
     var $button = $('#button');
