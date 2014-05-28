@@ -116,6 +116,7 @@ $(document).ready(function () {
             color: '#fff',
         });
         chart.redraw();
+        $('#container').css('opacity',.9);
     }, 2500);
 
     $('#article').css('margin-bottom', 220.0 + 'px');
