@@ -541,26 +541,26 @@ header > h1 .pt-serif {
 
 .context-quote-left .context-quote{
     left: -120px;
-    border-right: 7px solid #FFD600;
+    border-right: 7px solid #062472;
     padding: 5px 20px 5px 0;
 }
 
 .context-quote-right .context-quote {
     right: -120px;
-    border-left: 7px solid #FFD600;
+    border-left: 7px solid #062472;
     padding: 5px 0 5px 20px;
 }
 
-.context-quote-body:before {
-    content: "(overheard)";
+.context-quote-title{
     margin-bottom: 10px;
     display: block;
-    font-style: normal;
+    font-weight: bold;
     font-size: 0.85em;
 }
 
 .context-quote-body {
-    font-style: italic;
+    /* font-style: italic; */
+    font-size: 12px;
 }
 
 .context-quote-attrib {
