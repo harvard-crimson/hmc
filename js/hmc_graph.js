@@ -19,8 +19,8 @@ $(document).ready(function () {
         plotOptions: {
             series: {
                 animation: {
-                    duration: 2000,
-                    easing: 'swing'
+                    duration: 1500,
+                    easing: 'linear'
                 }
             }
         },
@@ -138,7 +138,7 @@ $(document).ready(function () {
 
     var hasPlotBand = false;
     var $button = $('#button');
-    
+
     controller = new ScrollMagic();
 
     var scene = new ScrollScene({triggerElement: "#container", duration: 200})
