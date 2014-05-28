@@ -109,12 +109,12 @@ header ul li.inactive:hover {
     cursor: default;
 }
 
-.back-arrow {
+/*.back-arrow {
     height: 23px;
     float: left;
     position: relative;
     top: 7px;
-}
+}*/
 
 @media (max-width: 720px) {
     header ul {
@@ -138,7 +138,6 @@ header ul li.inactive:hover {
     font-variant: small-caps;
     word-spacing: 0.2em;
     z-index: 99;
-    color:white;
 }
 
 header > h1 .pt-serif {
@@ -288,9 +287,18 @@ header > h1 .pt-serif {
 #article h1 {
     margin-top: 36px;
     margin-bottom: 5px;
-    font-size: 4.3em;
     text-align: right;
+    position: absolute;
+    z-index: 1;
+    padding-top: 300px;
+    text-align: right;
+    opacity: 1;
+    letter-spacing: 5px;
+    width: 100%;
+    color:white;
+    font-size: 4.3em;
 }
+
 
 #article .byline {
     text-align: center;
@@ -303,16 +311,6 @@ header > h1 .pt-serif {
     text-align: right;
     opacity: 1;
     color:white;
-}
-
-#hmc-title {
-    position: absolute;
-    z-index: 1;
-    padding-top: 300px;
-    padding-left:330px;
-    text-align: right;
-    opacity: 1;
-    letter-spacing: 5px;
 }
 
 #article .byline > a {
@@ -417,7 +415,16 @@ header > h1 .pt-serif {
     .byline {
         font-size: 1.3em;
     }
+    #article h1 {
+        font-size: 3.25em;
+        padding-top: 250px;
+    }
+    #article .byline {
+        padding-top: 350px;
+    }
+
 }
+
 
 @media (max-width: 700px) {
     #binary-pane {
@@ -436,6 +443,14 @@ header > h1 .pt-serif {
     .byline {
         font-size: 1.1em;
     }
+    #article .byline {
+        font-size: .95em;
+        padding-top: 400px;
+    }
+    #article h1 {
+        font-size: 3em;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -452,6 +467,14 @@ header > h1 .pt-serif {
     #timeline-wrapper {
         display: none;
     }
+    #article h1 {
+        font-size: 2.5em;
+        padding-top: 200px;
+    }
+    #article .byline {
+        text-align: right;
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -479,9 +502,11 @@ header > h1 .pt-serif {
     }
     #article h1 {
         font-size: 2em;
+        padding-top: 150px;
     }
     #article .byline {
-        font-size: 0.8em;
+        font-size: .8em;
+        padding-top: 275px
     }
 }
 
