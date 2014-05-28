@@ -510,3 +510,66 @@ header > h1 .pt-serif {
     }
 }
 
+.context-quote-wrapper {
+    position: absolute;
+    width: 150px;
+    overflow: hidden;
+}
+
+.context-quote {
+    /*font-size: 0.9em;*/
+    color: #888;
+    position: relative;
+    opacity: 0;
+}
+
+.context-quote-trigger {
+    height: 0;
+    position: relative;
+    top: -150px;
+}
+
+.context-quote-left {
+    left: 0;
+    padding-left: 20px;
+}
+
+.context-quote-right {
+    right: 0;
+    padding-right: 20px;
+}
+
+.context-quote-left .context-quote{
+    left: -120px;
+    border-right: 7px solid #062472;
+    padding: 5px 20px 5px 0;
+}
+
+.context-quote-right .context-quote {
+    right: -120px;
+    border-left: 7px solid #062472;
+    padding: 5px 0 5px 20px;
+}
+
+.context-quote-title{
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.context-quote-body {
+    /* font-style: italic; */
+    font-size: 12px;
+}
+
+.context-quote-attrib {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.context-quote-attrib:before {
+    content: "\2014";
+}
+
+
