@@ -1,6 +1,7 @@
 var controller;
 $(document).ready(function () {
-    height_top=$('#article-header').height()
+    controller = new ScrollMagic();
+    height_top=$('#article-header').height();
     var chart = new Highcharts.Chart({
         plotOptions: {
             series: {
@@ -142,5 +143,19 @@ $(document).ready(function () {
                 hasPlotBand = !hasPlotBand;
             })
         .addTo(controller);
+
+        controller = new ScrollMagic();
+
+    $(".context-quote-wrapper").each(function(index, element) {
+        var $quote = $(element).children('.context-quote');
+        var tween;
+        if ($(element).hasClass('context-quote-right'))
+            tween = TweenMax.to($quote, 1.5, {opacity: 1, right: 0, ease: Cubic.easeOut});
+        else
+            tween = TweenMax.to($quote, 1.5, {opacity: 1, left: 0, ease: Cubic.easeOut});
+        var scene = new ScrollScene({triggerElement: $quote.children('.context-quote-trigger')})
+                        .setTween(tween)
+                        .addTo(controller);
+    });
 
 });
