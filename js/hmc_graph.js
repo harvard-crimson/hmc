@@ -46,6 +46,10 @@ $(document).ready(function () {
                                 duration: 1000
                             }
                         );
+                        chart.series[1].show();
+                        chart.series[2].show();
+                        chart.redraw();
+
                     }
                     else{
                         chart.setSize(
@@ -54,9 +58,11 @@ $(document).ready(function () {
                             animation = {
                                 duration: 1000
                             }
-                        );                     
+                        );
                         chart.series[1].hide();
                         chart.series[2].hide();
+                        chart.redraw();
+
                     }
                 }
             }
@@ -90,7 +96,7 @@ $(document).ready(function () {
             tickInterval: 10,
             gridLineColor:'rgba(0,0,0,.03)',
             title: {
-                text: 'Yearly Returns',
+                text: 'Return',
                 style: {
                     color: '#000'
                 }
@@ -151,15 +157,27 @@ $(document).ready(function () {
     setTimeout(function() {
         chart.setSize(
            $(window).width(), 
-           ($(window).height()-$('#article-header').height())/2,
+           ($(window).height()-$('#article-header').height()),
            animation = false
         );
         chart.chartBackground.css({
             color: '#fff',
         });
-        chart.series[1].hide();
-        chart.series[2].hide();
+        chart.series[1].show();
+        chart.series[2].show();
         chart.redraw();
+        setTimeout(function() {
+            chart.setSize(
+                $(window).width(),
+                ($(window).height()-$('#article-header').height())/2,
+                animation = {
+                    duration: 1000
+                }
+            );
+            chart.series[1].hide();
+            chart.series[2].hide();
+
+        }, 1500);
         $('#container').css('opacity',1);
         
 
