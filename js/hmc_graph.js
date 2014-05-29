@@ -120,8 +120,9 @@ $(document).ready(function () {
 
     setTimeout(function() {
         chart.setSize(
-           $(window).width(), 
-           $(window).height()-$('#article-header').height(),
+           $(window).width(),
+           180, 
+           // $(window).height()-$('#article-header').height(),
            animation= {
                     duration: 1200
                 }
