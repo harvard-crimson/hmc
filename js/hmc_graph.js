@@ -146,38 +146,34 @@ $(document).ready(function () {
     $('#article').css('margin-bottom', 220.0 + 'px');
     $('#article-header').css('height', '456px');
 
-    $('#showGraph-1').waypoint(function() {
-        console.log('1');
+    $('#showGraph-1').waypoint(function(direction) {
+        console.log(direction);
         $('#container').highcharts().xAxis[0].addPlotBand({
             from: 0,
             to: 10 ,
             id: 'plot-band',
-            color: '#FCFFC5',
+            color: '#E0E0E0',
         });
         $('#container').stop().slideDown('slow');
     });
 
-    $('#showGraph-2').waypoint(function() {
-        console.log('2');
-
+    $('#showGraph-2').waypoint(function(direction) {
         $('#container').highcharts().xAxis[0].addPlotBand({
             from: 12,
             to: 14 ,
             id: 'plot-band',
-            color: '#FCFFC5',
+            color: '#E0E0E0',
         });
         chart.redraw();
         $('#container').stop().slideDown('slow');
     });
 
-    $('#showGraph-3').waypoint(function() {
-        console.log('3');
-
+    $('#showGraph-3').waypoint(function(direction) {
         $('#container').highcharts().xAxis[0].addPlotBand({
             from: 14,
             to: 17 ,
             id: 'plot-band',
-            color: '#FCFFC5',
+            color: '#E0E0E0',
         });
         $('#container').stop().slideDown('slow');
     });
