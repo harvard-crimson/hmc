@@ -148,13 +148,13 @@ $(document).ready(function () {
 
     $('.showGraph').waypoint(function() {
         console.log('up');
-        $('#container').slideUp('slow');
+        $('#container').slideDown('slow');
     });
 
     $('.hideGraph').waypoint(function(){
         console.log('down');
 
-        $('#container').slideDown('slow');
+        $('#container').slideUp('slow');
     });
 
     var hasPlotBand = false;
