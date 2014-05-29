@@ -1,10 +1,10 @@
 $(document).ready(function() { 
   /* Script used for smooth navigation */
-  $(".navlink").click(function(event) {
+  $(".header-nav a").click(function(event) {
     event.preventDefault();
     var target = $(this).attr("href")
     $("html, body").animate({
-      scrollTop: $(target).offset().top - $(".navigation").outerHeight() - 15
+      scrollTop: $(target).offset().top - $('header').outerHeight() + 60
     }, 500);
   });
 });
