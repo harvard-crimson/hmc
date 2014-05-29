@@ -36,15 +36,27 @@ $(document).ready(function () {
                         isClicked = true;
                     }
                     $(this).data('clicked',isClicked);
-                    if (isClicked ){
+                    if (isClicked){
                         chart.series[1].show();
                         chart.series[2].show();
-                        chart.setSize($(window).width(), $(window).height()-$('#article-header').height());
+                        chart.setSize(
+                            $(window).width(),
+                            $(window).height()-$('#article-header').height(),
+                            animation = {
+                                duration: 1000
+                            }
+                        );
                     }
                     else{
+                        chart.setSize(
+                            $(window).width(),
+                            ($(window).height()-$('#article-header').height())/2,
+                            animation = {
+                                duration: 1000
+                            }
+                        );                     
                         chart.series[1].hide();
                         chart.series[2].hide();
-                        chart.setSize($(window).width(), ($(window).height()-$('#article-header').height())/2);
                     }
                 }
             }
