@@ -26,7 +26,7 @@ $(document).ready(function () {
                         .addTo(controller);
     });
     height_top=$('#article-header').height();
-    var chart = new Highcharts.Chart({
+    chart = new Highcharts.Chart({
         plotOptions: {
             animation: false
         },
@@ -125,7 +125,7 @@ $(document).ready(function () {
         );   
         chart.redraw();
     });
-    
+
     setTimeout(function() {
         chart.setSize(
            $(window).width(), 
@@ -145,6 +145,10 @@ $(document).ready(function () {
             
     $('#article').css('margin-bottom', 220.0 + 'px');
     $('#article-header').css('height', '456px');
+
+    $('.showGraph').waypoint(function() {
+        alert('bullshit');
+    });
 
     var hasPlotBand = false;
     var $button = $('#button');
