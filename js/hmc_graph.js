@@ -138,16 +138,23 @@ $(document).ready(function () {
         chart.series[1].show();
         chart.series[2].show();
         chart.redraw();
-        $('#container').css('opacity',1);
-        
 
+        $('#container').css('opacity',1);
+        $('#container').hide();
     }, 0);
             
     $('#article').css('margin-bottom', 220.0 + 'px');
     $('#article-header').css('height', '456px');
 
     $('.showGraph').waypoint(function() {
-        alert('bullshit');
+        console.log('up');
+        $('#container').slideUp('slow');
+    });
+
+    $('.hideGraph').waypoint(function(){
+        console.log('down');
+
+        $('#container').slideDown('slow');
     });
 
     var hasPlotBand = false;
