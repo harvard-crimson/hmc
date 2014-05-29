@@ -34,7 +34,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: #8F8FBC;
+    color: #007;
 }
 
 .wrapper {
@@ -147,7 +147,7 @@ header ul li.inactive:hover {
     word-spacing: 0.1em;
     letter-spacing: 2px;
     font-size: 4.3em;
-    padding-right: 20px;
+    padding-right: 65px;
 }
 
 .section-title {
@@ -157,13 +157,12 @@ header ul li.inactive:hover {
     z-index: 99;
 }
 
-header > h1 .pt-serif {
-	/*margin-top: 50px;*/
-    /*margin-right: 5000px;*/
-}
-
 .lora{
     font-family: 'Lora', 'sans-serif';
+}
+
+.big-letter {
+    font-size: 4em;
 }
 
 .intro {
@@ -230,27 +229,6 @@ header > h1 .pt-serif {
      top: 0.1em; 
 }
 
-#binary-pane {
-    position: fixed;
-    z-index: -1;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font-family: 'Inconsolata';
-    font-size: 0.9em;
-    top: 0;
-    left: 0;
-    color: #93d500;
-}
-
-#binary-text {
-    position: absolute;
-    bottom: 0;
-    width: auto;
-    line-height: 1.3em;
-}
-
 .white {
     background-color: white;
 }
@@ -269,18 +247,6 @@ header > h1 .pt-serif {
     top: 0;
     bottom: 0;
     width: 37.5%;
-}
-
-#john-row {
-    position: relative;
-    text-align: center;
-}
-
-#statue {
-    width: 25%;
-    /* margin-left: 36%; */
-    margin-bottom: -5px;
-    border: 2px solid #fff;
 }
 
 #right {
@@ -315,7 +281,7 @@ header > h1 .pt-serif {
     font-size:20px;
     text-align: right;
     font-family: 'Lora', 'sans-serif';
-    padding-right: 30px;
+    padding-right: 75px;
     color: #fff;
 }
 
@@ -336,10 +302,6 @@ header > h1 .pt-serif {
     margin-top: 40px;
 }
 
-#signoff {
-    /*margin-top: 4 0px;*/
-}
-
 #designer_signoff {
     font-style: italic;
     font-size: 0.9em;
@@ -358,7 +320,7 @@ header > h1 .pt-serif {
 
 #article-contents h2 {
     font-size: 3em;
-    text-align: center;
+    text-align: left;
     line-height: 100%;
     display: inline-block;
     padding-bottom: 5px;
@@ -383,9 +345,6 @@ header > h1 .pt-serif {
 
 
 @media (max-width: 1000px) {
-    #statue {
-       width: 33%;
-    }
     #left {
         width: 33.5%;
     }
@@ -409,13 +368,6 @@ header > h1 .pt-serif {
 
 
 @media (max-width: 700px) {
-    #binary-pane {
-        font-size: 0.5em;
-    }
-
-    #statue {
-       width: 50%;
-    }
     #left {
         width: 25%;
     }
@@ -448,6 +400,7 @@ header > h1 .pt-serif {
     }
     #article .byline span {
         font-size: 0.9em;
+        padding-right: 25px;
     }
     #headline-wrapper {
         margin-top: 25%;
@@ -458,6 +411,7 @@ header > h1 .pt-serif {
     }
     #hmc-title h1 {
         font-size: 2.5em;
+        padding-right: 15px;
     }
     #hmc-title {
         padding-top: 200px;
@@ -471,10 +425,6 @@ header > h1 .pt-serif {
     }
     #headline-wrapper {
         width: 60%;
-    }
-
-    #statue {
-       width: 67%;
     }
     #left {
         width: 16.5%;
