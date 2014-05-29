@@ -147,7 +147,6 @@ $(document).ready(function () {
     $('#article-header').css('height', '456px');
 
     $('#showGraph-1').waypoint(function(direction) {
-        console.log(direction);
         $('#container').highcharts().xAxis[0].addPlotBand({
             from: 0,
             to: 10 ,
