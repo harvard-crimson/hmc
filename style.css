@@ -23,7 +23,7 @@ div {
 
 a {
     text-decoration: none;
-    color:#B42529;
+    color:#0000AA;
     -webkit-transition: color 0.1s ease-in;
     -o-transition: color 0.1s ease-in;
     -moz-transition: color 0.1s ease-in;
@@ -34,8 +34,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: #EE6363;
-/*    color: #062472;*/
+    color: #8F8FBC;
 }
 
 .wrapper {
@@ -545,7 +544,7 @@ header > h1 .pt-serif {
     display: block;
     font-size: 1.5em;
     text-align: center;
-    background-color: rgba(186,6,0,0.8);
+    background-color: rgba(0,0,120,0.8);
     font-family: 'PT Serif', 'Crimson', serif;
     position: absolute;
     width: 100%;

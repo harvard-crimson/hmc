@@ -188,45 +188,4 @@ $(document).ready(function () {
         $('#container').stop().slideUp('slow');
     });
 
-
-    var triggers = $(".highlight-trigger");
-
-    var bands = [[0,9.5],[0,4.5],[5.5,11.5],[10.5,13.5],[13.5,15.5],[10.5,17.5]];
-
-    var hasPlotBands = [false, false,false,false,false,false];
-
-    function create_event(index,trigger,remove) {
-        var scene = new ScrollScene({triggerElement: trigger, duration: 200})
-        .on("start", function (e) {
-                add = (controller.info("scrollDirection").toString() == "FORWARD" && !remove)||(controller.info("scrollDirection").toString() != "FORWARD" && remove)
-
-                if (add) {
-                    chart.xAxis[0].addPlotBand({
-                        from: bands[index][0],
-                        to: bands[index][1],
-                        color: '#E0E0E0',
-                        id: 'plot-band-'+index.toString()
-                    });
-                } else {
-                    chart.xAxis[0].removePlotBand('plot-band-'+index.toString());
-                }
-            })
-        .addTo(controller);
-        return;
-    }
-
-    //iterate through the triggers and add in the toggling triggers
-    for (var i=0; i<7; i++)
-    {
-        trigger = triggers[i];
-        if (i!=0)
-        {
-            create_event(i-1,trigger,true);
-        }
-        if (i!=6)
-        {
-            create_event(i,trigger,false);
-        }
-    }
-
 });
