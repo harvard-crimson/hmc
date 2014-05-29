@@ -152,7 +152,7 @@ $(document).ready(function () {
             from: 0,
             to: 10 ,
             id: 'plot-band',
-            color: '#FCFFC5',
+            color: '#E0E0E0',
         });
         $('#container').stop().slideDown('slow');
     });
@@ -164,7 +164,7 @@ $(document).ready(function () {
             from: 12,
             to: 14 ,
             id: 'plot-band',
-            color: '#FCFFC5',
+            color: '#E0E0E0',
         });
         chart.redraw();
         $('#container').stop().slideDown('slow');
@@ -177,7 +177,7 @@ $(document).ready(function () {
             from: 14,
             to: 17 ,
             id: 'plot-band',
-            color: '#FCFFC5',
+            color: '#E0E0E0',
         });
         $('#container').stop().slideDown('slow');
     });
