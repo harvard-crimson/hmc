@@ -183,27 +183,4 @@ $(document).ready(function () {
         $('#container').stop().slideUp('slow');
     });
 
-    var hasPlotBand = false;
-    var $button = $('#button');
-
-    controller = new ScrollMagic();
-
-    var scene = new ScrollScene({triggerElement: "#container", duration: 200})
-        .on("start end", function (e) {
-                if (!hasPlotBand) {
-                    chart.xAxis[0].addPlotBand({
-                        from: 5,
-                        to: 7,
-                        color: '#FCFFC5',
-                        id: 'plot-band-1'
-                    });
-                    $button.html('Remove plot band');
-                } else {
-                    chart.xAxis[0].removePlotBand('plot-band-1');
-                }
-                hasPlotBand = !hasPlotBand;
-            })
-        .addTo(controller);
-
-        controller = new ScrollMagic();
 });
