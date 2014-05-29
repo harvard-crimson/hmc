@@ -1,4 +1,4 @@
-#container {
+#container, #container-bar {
 	position:fixed;
 	bottom:0;
 	-webkit-box-shadow: 0 0px 10px 0px black;
@@ -512,7 +512,7 @@ header > h1 .pt-serif {
 
 .context-quote-wrapper {
     position: absolute;
-    width: 150px;
+    width: 200px;
     overflow: hidden;
 }
 
@@ -569,7 +569,7 @@ header > h1 .pt-serif {
 }
 
 .context-quote-attrib:before {
-    content: "\2014";
+    content: "2014";
 }
 
 
