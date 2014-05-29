@@ -43,7 +43,7 @@ $(document).ready(function () {
                             $(window).width(),
                             $(window).height()-$('#article-header').height(),
                             animation = {
-                                duration: 1000
+                                duration: 600
                             }
                         );
                         chart.series[1].show();
@@ -56,7 +56,7 @@ $(document).ready(function () {
                             $(window).width(),
                             ($(window).height()-$('#article-header').height())/2,
                             animation = {
-                                duration: 1000
+                                duration: 600
                             }
                         );
                         chart.series[1].hide();
@@ -153,6 +153,7 @@ $(document).ready(function () {
            220.0,
            false
         );   
+        chart.redraw();
     });
     setTimeout(function() {
         chart.setSize(
