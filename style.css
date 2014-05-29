@@ -358,7 +358,7 @@ header > h1 .pt-serif {
 
 #article-contents h2 {
     font-size: 3em;
-    text-align: center;
+    text-align: left;
     line-height: 100%;
     display: inline-block;
     padding-bottom: 5px;
