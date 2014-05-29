@@ -130,8 +130,6 @@ $(document).ready(function () {
     $('#article').css('margin-bottom', 220.0 + 'px');
     $('#article-header').css('height', '456px')
 
-    var hasPlotBand = false;
-
     var $button = $('#button');
 
     controller = new ScrollMagic();
@@ -151,7 +149,7 @@ $(document).ready(function () {
                     chart.xAxis[0].addPlotBand({
                         from: bands[index][0],
                         to: bands[index][1],
-                        color: '#FCFFC5',
+                        color: '#E0E0E0',
                         id: 'plot-band-'+index.toString()
                     });
                 } else {

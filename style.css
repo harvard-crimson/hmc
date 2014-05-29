@@ -22,9 +22,8 @@ div {
 }
 
 a {
-    /*color: #7ABC00;*/
     text-decoration: none;
-
+    color:#B42529;
     -webkit-transition: color 0.1s ease-in;
     -o-transition: color 0.1s ease-in;
     -moz-transition: color 0.1s ease-in;
@@ -35,7 +34,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: #478900;
+    color: #EE6363;
 }
 
 .wrapper {
@@ -134,7 +133,7 @@ header ul li.inactive:hover {
 
 
 .pt-serif {
-    font-family: 'PT Serif', serif;
+    font-family: 'Trajan', serif;
     font-variant: small-caps;
     word-spacing: 0.2em;
     z-index: 99;
@@ -357,7 +356,7 @@ header > h1 .pt-serif {
     line-height: 100%;
     display: inline-block;
     padding-bottom: 5px;
-    border-bottom: 7px solid #095169;
+    border-bottom: 7px solid #8DB6CD;
     margin: 10px 0;
     color: #062472;
 }
@@ -366,42 +365,6 @@ header > h1 .pt-serif {
     margin-bottom: 0;
 }
 
-#timeline-wrapper {
-    padding: 20px 20px 1px 20px;
-    margin: 35px auto;
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-#timeline {
-    width: 100%;
-    max-width: 600px;
-    margin: 50px auto 30px;
-}
-
-.timeline-wrap {
-    background: #7ABC00;
-}
-
-#timeline a {
-    color: #AAA;
-    text-decoration: none;
-}
-
-#timeline a:hover {
-    text-decoration: underline;
-}
-
-#timeline-wrapper .cyber-title {
-    font-size: 18px;
-    /* font-weight: bold; */
-}
-
-#timeline-desc {
-    margin: 8px 0 0;
-    font-size: 12px;
-    font-style: italic;
-    line-height: 1.5em;
-}
 
 @media (max-width: 1000px) {
     #statue {
