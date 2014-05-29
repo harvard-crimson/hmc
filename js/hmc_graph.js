@@ -17,18 +17,14 @@ $(document).ready(function () {
     height_top=$('#article-header').height();
     var chart = new Highcharts.Chart({
         plotOptions: {
-            series: {
-                animation: {
-                    duration: 1500,
-                    easing: 'linear'
-                }
-            }
+            animation: false
         },
         chart: {
             renderTo: container,
             backgroundColor: 'rgba(255,255,255,0)',
             width: $(window).width(),
-            height: $(window).height()-$('header').height()//-$('#article-header').height()
+            height: $(window).height()-$('header').height(),//-$('#article-header').height()
+            animation: false
         },
         title: {
             text: 'Endowment Returns',
@@ -109,7 +105,7 @@ $(document).ready(function () {
         }],
     });
 
-    $(window).resize(function() 
+    $(window).resize(function()
     {    
         chart.setSize(
            $(window).width(), 
@@ -122,16 +118,14 @@ $(document).ready(function () {
         chart.setSize(
            $(window).width(), 
            $(window).height()-$('#article-header').height(),
-           animation= {
-                    duration: 1200
-                }
+           animation = false
         );
         chart.chartBackground.css({
             color: '#fff',
         });
         chart.redraw();
-        $('#container').css('opacity',.9);
-    }, 2500);
+        $('#graph').css('opacity',1);
+    }, 0);
 
     $('#article').css('margin-bottom', 220.0 + 'px');
     $('#article-header').css('height', '456px')
