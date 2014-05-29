@@ -321,7 +321,7 @@ header > h1 .pt-serif {
     color:white;
 }
 
-#article-contents {
+.article-contents {
     font-family: 'Georgia', sans-serif;
     max-width: 650px;
     margin: 40px auto 0;
@@ -329,7 +329,7 @@ header > h1 .pt-serif {
     line-height: 1.5em;
 }
 
-#article-contents section:not(:first-child) {
+.article-contents section:not(:first-child) {
     margin-top: 40px;
 }
 
@@ -358,7 +358,7 @@ header > h1 .pt-serif {
 }
 
 
-#article-contents h2 {
+.article-contents h2 {
     font-size: 3em;
     text-align: center;
     line-height: 100%;
@@ -369,7 +369,7 @@ header > h1 .pt-serif {
     color: #062472;
 }
 
-#article-contents p:last-child {
+.article-contents p:last-child {
     margin-bottom: 0;
 }
 
