@@ -146,14 +146,11 @@ $(document).ready(function () {
     $('#article').css('margin-bottom', 220.0 + 'px');
     $('#article-header').css('height', '456px');
 
-<<<<<<< HEAD
-=======
     $('.showGraph').waypoint(function() {
         alert('bullshit');
     });
 
     var hasPlotBand = false;
->>>>>>> 7e61368b66a598f956e9d9e331f74399506a604c
     var $button = $('#button');
 
     controller = new ScrollMagic();
@@ -162,17 +159,10 @@ $(document).ready(function () {
         .on("start end", function (e) {
                 if (!hasPlotBand) {
                     chart.xAxis[0].addPlotBand({
-<<<<<<< HEAD
-                        from: bands[index][0],
-                        to: bands[index][1],
-                        color: '#E0E0E0',
-                        id: 'plot-band-'+index.toString()
-=======
                         from: 5,
                         to: 7,
                         color: '#FCFFC5',
                         id: 'plot-band-1'
->>>>>>> 7e61368b66a598f956e9d9e331f74399506a604c
                     });
                     $button.html('Remove plot band');
                 } else {
