@@ -1,3 +1,15 @@
+$(document).ready(function() { 
+  /* Script used for smooth navigation */
+  $(".navlink").click(function(event) {
+    event.preventDefault();
+    var target = $(this).attr("href")
+    $("html, body").animate({
+      scrollTop: $(target).offset().top - $(".navigation").outerHeight() - 15
+    }, 500);
+  });
+});
+
+
 var controller;
 $(document).ready(function () {
     controller = new ScrollMagic();
