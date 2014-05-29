@@ -22,10 +22,6 @@ div {
 }
 
 a {
-<<<<<<< HEAD
-=======
-    color: #3957A5;
->>>>>>> af30e90466d0aa9e636e540eadc12766bd8b7818
     text-decoration: none;
     color:#B42529;
     -webkit-transition: color 0.1s ease-in;
@@ -38,11 +34,8 @@ a {
 
 a:hover {
     text-decoration: underline;
-<<<<<<< HEAD
     color: #EE6363;
-=======
-    color: #062472;
->>>>>>> af30e90466d0aa9e636e540eadc12766bd8b7818
+/*    color: #062472;*/
 }
 
 .wrapper {
@@ -158,14 +151,8 @@ header ul li.inactive:hover {
     padding-right: 20px;
 }
 
-
-<<<<<<< HEAD
-.pt-serif {
-    font-family: 'Trajan', serif;
-=======
 .section-title {
-    font-family: 'PT Serif', serif;
->>>>>>> af30e90466d0aa9e636e540eadc12766bd8b7818
+    font-family: 'Trajan', serif;
     font-variant: small-caps;
     word-spacing: 0.1em;
     z-index: 99;
