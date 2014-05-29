@@ -1,4 +1,4 @@
-#container, #container-bar {
+#container {
 	position:fixed;
 	bottom:0;
 	-webkit-box-shadow: 0 0px 10px 0px black;
@@ -9,13 +9,12 @@
     padding: 0px;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
-
 body {
 	margin: 0;
 	width: 100%;
 	height: 100%;
     padding:0;
+    font-size: 14px;
 }
 div {
     display:block;
@@ -42,7 +41,7 @@ a:hover {
 }
 
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -296,6 +295,7 @@ header > h1 .pt-serif {
     width: 100%;
     color:white;
     font-size: 4.3em;
+    margin-left: -20px;
 }
 
 
@@ -310,6 +310,7 @@ header > h1 .pt-serif {
     text-align: right;
     opacity: 1;
     color:white;
+    margin-left: -20px;
 }
 
 #article .byline > a {
@@ -321,7 +322,7 @@ header > h1 .pt-serif {
     font-family: 'Georgia', sans-serif;
     max-width: 650px;
     margin: 40px auto 0;
-    font-size: 14px;
+    font-size: 1.1em;
     line-height: 1.5em;
 }
 
@@ -345,8 +346,12 @@ header > h1 .pt-serif {
     background: -webkit-linear-gradient(rgba(0,0,0,1),rgba(255,0,0,.3), rgba(255,0,0,0)); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(rgba(0,0,0,1),rgba(255,0,0,.3), rgba(255,0,0,0)); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(rgba(0,0,0,1),rgba(255,0,0,.3), rgba(255,0,0,0)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(255,0,0,0),rgba(40,0,0,.6),rgba(0,0,0,1)); /* Standard syntax (must be last) */(rgba(0,0,0,1),rgba(30,0,0,.3), rgba(255,0,0,0)); /* Standard syntax (must be last) */
+    background: linear-gradient(rgba(255,0,0,0),rgba(40,0,0,.6),rgba(0,0,0,1)); /* Standard syntax (must be last) */
     opacity: 1;
+}
+
+#article-header div {
+    padding-right: 20px;
 }
 
 
@@ -364,6 +369,16 @@ header > h1 .pt-serif {
 #article-contents p:last-child {
     margin-bottom: 0;
 }
+
+
+
+.section-anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+}
+
+
 
 
 @media (max-width: 1000px) {
@@ -475,65 +490,87 @@ header > h1 .pt-serif {
 }
 
 .context-quote-wrapper {
-    position: absolute;
-    width: 200px;
+    width: 205px;
     overflow: hidden;
 }
 
 .context-quote {
-    /*font-size: 0.9em;*/
-    color: #888;
+    background-color: rgba(9,81,105,0.07);
+    /*background-color: #F4FFEF;*/
     position: relative;
     opacity: 0;
+    border: 1px solid #bbb;
 }
 
 .context-quote-trigger {
     height: 0;
     position: relative;
-    top: -150px;
+    top: -50px;
 }
 
 .context-quote-left {
     left: 0;
-    padding-left: 20px;
+    margin-left: -105px;
+    float: left;
+    margin-right: 10px;
 }
 
 .context-quote-right {
     right: 0;
-    padding-right: 20px;
+    margin-right: -105px;
+    float: right;
+    margin-left: 10px;
 }
 
-.context-quote-left .context-quote{
+.context-quote-left .context-quote {
     left: -120px;
-    border-right: 7px solid #062472;
-    padding: 5px 20px 5px 0;
+    /*border-right: 7px solid #062472;*/
+    /*padding: 5px 10px 5px 10px;*/
 }
 
 .context-quote-right .context-quote {
     right: -120px;
-    border-left: 7px solid #062472;
-    padding: 5px 0 5px 20px;
+    /*border-left: 7px solid #062472;*/
+    /*padding: 5px 10px 5px 10px;*/
 }
 
-.context-quote-title{
+.context-quote-title {
+    color: #fff;
     margin-bottom: 10px;
     display: block;
-    font-weight: bold;
-    font-size: 0.85em;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: rgba(186,6,0,0.8);
+    font-family: 'PT Serif', 'Crimson', serif;
+    position: absolute;
+    width: 100%;
+    bottom: -4px;
+}
+
+.context-quote-title div {
+    padding: 10px 5px;
+}
+
+.context-quote-title-picless {
+    position: initial;
+}
+
+.context-quote-header {
+    position: relative;
+}
+
+.context-quote-header img {
+    width: 100%;
 }
 
 .context-quote-body {
-    /* font-style: italic; */
-    font-size: 12px;
+    font-size: 1em;
+    padding: 0 10px 10px 10px;
 }
 
-.context-quote-attrib {
-    margin-top: 10px;
-    font-size: 0.9em;
+.context-quote-body ul {
+    padding-left: 13px;
 }
 
-.context-quote-attrib:before {
-    content: "2014";
-}
 
 

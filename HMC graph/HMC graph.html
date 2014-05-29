@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic|PT+Serif:400,700,400italic,700italic|Inconsolata:400,700' rel='stylesheet' type='text/css'>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>HMC: Divesting from nothing since 1636</title>
+        <title>Has HMC Lost Its Edge? | Commencement 2014 | The Harvard Crimson</title>
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <link href="../style.css" rel="stylesheet" type="text/css" />
         <script src="../js/highcharts.js"></script>        
         <script src="../js/scrollmagic.js"></script>
         <script src="../js/TweenMax.min.js"></script>
+        <script src="../js/waypoints.min.js"></script>
         <script src="../js/hmc_graph.js"></script>
     </head>
 <body>
@@ -21,12 +22,10 @@
                     <img src="../assets/img/logo.png" height="18" width="215">
                 </a>
                 <ul class="header-nav">
-                    <a href="#featured"><li>Featured</li></a>
-                    <a href="#levity"><li>Levity</li></a>
-                    <a href="#around-town"><li>Around Town</li></a>
-                    <a href="#conversations"><li>Conversations</li></a>
-                    <a href="#Endpapers"><li>Endpapers</li></a>
-                    <a href="#editors-note"><li>Editors&rsquo; Note</li></a>
+                    <a href="#golden-years"><li>The Golden Years</li></a>
+                    <a href="#coupled-crises"><li>Coupled Crises</li></a>
+                    <a href="#new-mandate"><li>A New Mandate</li></a>
+                    <a href="#campaign"><li>Capital Campaign</li></a>
                 </ul>
             </div>
         </header>
@@ -38,40 +37,42 @@
         </div>
                 <div id="article-contents" class="white">
                     <section>
-                        <p>Perched sixteen stories above street level in the Boston Federal Reserve Building, the office of Jane L. Mendillo offers majestic views of boats bobbing in Boston Harbor and planes touching down at Logan Airport. Sitting two levels above a bustling trading floor, Mendillo not only occupies one of the nicest offices at Harvard but, as CEO of Harvard Management Company, influences the University’s financial strength more than even the most celebrated Harvard donors. </p>
+                        <p>Perched sixteen stories above street level in the Boston Federal Reserve Building, the office of Jane L. Mendillo offers majestic views of boats bobbing in Boston Harbor and planes touching down at Logan Airport. Sitting two levels above a bustling trading floor, Mendillo not only occupies one of the nicest offices at Harvard but, as CEO of Harvard Management Company, influences the University’s financial strength more than even the most celebrated Harvard donors.</p>
          
                         <p>At HMC, the stakes are high. Tasked with managing the largest endowment in higher education—valued at $32.7 billion as of July 2013—HMC’s managers operate with the knowledge that even the smallest margins translate to millions of dollars. To put it another way: a difference of a single percent in annual returns at HMC represents an amount—nearly $330 million—that is more than twice the size of the <a target="_blank" href="http://www.thecrimson.com/article/2014/2/19/largest-gift-college-history/"> largest gift announced so far </a> in the University’s <a target="_blank" href="http://www.thecrimson.com/article/2013/9/22/faust-capital-campaign-launch/">record-seeking</a> capital campaign.</p>
 
-
-                        <p><a target="_blank" href="http://www.thecrimson.com/article/2011/5/26/mendillo-hmc-meyer-endowment/">Mendillo has been credited</a> with helping stave off disaster during the nadir of the global financial crisis in 2009, when HMC saw endowment returns of negative 27.3 percent. Each day during the recession, Mendillo <a target="_blank" href="http://www.thecrimson.com/article/2011/5/26/mendillo-hmc-meyer-endowment/?page=single">convened</a> her senior staff for a 7 a.m. crisis meeting. Today, with the meltdown in the rearview mirror, those meetings have ceased, and the endowment has started to recover. Although the fund is nearly $7 billion stronger than it was in 2009, Mendillo says the pressure of managing such a large endowment is constant. </p>
-
-                        <p>“It’s an extra challenge,” she said in her office in mid-May. “It’s a huge responsibility.” </p>
-
-                        
-
-                        <p>Yet since the crisis, HMC—in a shift away from record yields in the 1990s and early 2000s—has posted returns that have straddled the national average. In this new normal, a far cry from HMC’s early-2000s status as the envy of higher education, University leaders say HMC is fulfilling its charge of beating internally set benchmarks and holding more liquid assets in case another crisis hits. But as Harvard seeks to raise an ambitious $6.5 billion in its ongoing capital campaign, the numbers do not lie: HMC is not performing as well as it used to. </p>
-
                         <div class="context-quote-wrapper context-quote-left">
-                        <div class="context-quote">
-                            <div class="context-quote-trigger"></div>
-                            <div class="context-quote-title">Harvard Management Company</div>
-                            <div class="context-quote-body">Founded in 1974, Harvard Management Company invests a significant portion of Harvard’s endowment with an in-house team of traders and managers based in the Boston Federal Reserve Building. HMC prides itself on being able to take positions in asset classes like private equity, natural resources, and real estate that may not be as accessible to smaller, externally-managed funds and which thus have the potential to generate an increased payout. </div>
+                            <div class="context-quote">
+                                <div class="context-quote-trigger"></div>
+                                <div class="context-quote-header"><div class="context-quote-title context-quote-title-picless"><div>Harvard Management Company</div></div></div>
+                                <div class="context-quote-body"><ul>
+                                    <li>Founded in 1974</li>
+                                    <li>Invests a significant portion of Harvard’s endowment with an in-house team</li>
+                                    <li>Based in the Boston Federal Reserve Building</li> 
+                                    <li>Takes positions in asset classes like private equity, natural resources, and real estate less accessible to smaller funds</li></ul></div>
                             </div>
                         </div>
 
+                        <div class="showGraph"></div>
+
                         <p><a target="_blank" href="http://www.thecrimson.com/article/2011/5/26/mendillo-hmc-meyer-endowment/">Mendillo has been credited</a> with helping stave off disaster during the nadir of the global financial crisis in 2009, when HMC saw endowment returns of negative 27.3 percent. Each day during the recession, Mendillo <a target="_blank" href="http://www.thecrimson.com/article/2011/5/26/mendillo-hmc-meyer-endowment/?page=single">convened</a> her senior staff for a 7 a.m. crisis meeting. Today, with the meltdown in the rearview mirror, those meetings have ceased, and the endowment has started to recover. Although the fund is nearly $7 billion stronger than it was in 2009, Mendillo says the pressure of managing such a large endowment is constant. </p>
+                        
 
                         <p>“It’s an extra challenge,” she said in her office in mid-May. “It’s a huge responsibility.” </p>
-                        
+
                         <p>Yet since the crisis, HMC—in a shift away from record yields in the 1990s and early 2000s—has posted returns that have straddled the national average. In this new normal, a far cry from HMC’s early-2000s status as the envy of higher education, University leaders say HMC is fulfilling its charge of beating internally set benchmarks and holding more liquid assets in case another crisis hits. But as Harvard seeks to raise an ambitious $6.5 billion in its ongoing capital campaign, the numbers do not lie: HMC is not performing as well as it used to. </p>
                     </section>
                     <section>
+                        <a class="section-anchor" id="golden-years"></a>
                         <h2 class="pt-serif">The Golden Years: Jack Meyer And The 'Yale Model' </h2>
+
                         <p>Today, HMC is closer to average than it has been in a long time. In two of the last four fiscal years, the company has posted returns that have trailed the average reported by the National Association of College and University Business Officers—an organization that conducts an annual survey that included more than 800 schools in 2013. In three of these years, moreover, HMC has performed below the national average for endowments worth more than $1 billion. </p>
 
                         <p>HMC has also lagged behind other large endowments in recent years. In FY 2012, Yale posted a return of 4.7 percent, outpacing Harvard, which returned -.05 percent. Princeton was also in the black in FY 2012, returning 3.1 percent. And last fiscal year, Yale, Stanford and Princeton each posted higher returns than HMC. </p>
 
                         <div class="highlight-trigger"></div>
+
+
                         
                         <p>It was not always this way. HMC under the leadership of CEO Jack R. Meyer beat the general NACUBO average each year between 1996 and and 2005, emerging with Yale as one of the nation’s most rapidly growing endowments. During the same span, Meyer’s HMC only underperformed against the $1 billion plus average twice. </p>
 
@@ -82,7 +83,10 @@
                         <div class="context-quote-wrapper context-quote-right">
                         <div class="context-quote">
                             <div class="context-quote-trigger"></div>
-                            <div class="context-quote-title">Jack R. Meyer </div>
+                            <div class="context-quote-header">
+                                <img src="../assets/img/meyer.jpg">
+                                <div class="context-quote-title"><div>Jack R. Meyer</div></div>
+                            </div>
                             <div class="context-quote-body">Jack R. Meyer led HMC from 1990 until September 2005, increasing the size of the endowment more than five times over and leaving it with a value of $25.9 billion. Though he approached celebrity status with some prominent University donors and leaders, Meyer sparked a controversy with the lavish sums he paid his top managers, who could earn more than $30 million in a single year. Meyer was so instrumental to Harvard’s endowment management that some thought that his departure would spell the end of Harvard investing the endowment with through an in-house arm.</div>
                             </div>
                         </div>
@@ -109,22 +113,24 @@
 
                     </section>
                     <section>
-                        <h2 class="pt-serif highlight-trigger">Coupled Crises </h2>
+                        <a class="section-anchor" id="coupled-crises"></a>
+                        <h2 class="pt-serif highlight-trigger">Coupled Crises</h2>
+
+                        <div class="showGraph"></div>
+
                         <p>In the early 2000s, Harvard's endowment, buoyed by its private equity holdings, was still soaring. It would take a financial crisis that penalized institutions with illiquid holdings, along with turnover at the top of HMC, to bring the company back to the pack. </p> 
 
                         <p>By the 2000s, Meyer had emerged as the confident, unapologetic face of HMC. But facing a <a target="_blank" href="http://www.thecrimson.com/article/2003/12/12/alums-decry-university-investor-salaries-harvard/">chorus of criticism from alumni</a> and other Harvard supporters over the compensation of HMC’s high-level executives, Meyer left the company in September 2005, taking about 30 of the firm’s investment professionals with him to the private sector. </p>
 
+
                         <div class="context-quote-wrapper context-quote-left">
                         <div class="context-quote">
                             <div class="context-quote-trigger"></div>
-                            <div class="context-quote-title">Mohamed A. El-Erian</div>
+                            <div class="context-quote-header"><img src=""><div class="context-quote-title"><div>Mohamed A. El-Erian</div></div></div>
                             <div class="context-quote-body">Mohamed El-Erian is the shortest-termed permanent CEO and President of HMC since the company’s founding in 1974. Named in October of 2005, El-Erian took the reins in early 2006 and left at the end of 2007. In his only full fiscal year in charge, El-Erian generated a return of 23 percent. He departed to return to the California investment management firm where he worked before coming to HMC. His short tenure—the brevity of which was hardly expected by University leadership—created disarray at the top of HMC and has been blamed with contributing to disorganization at the company which flamed up during the financial crisis. </div>
                             </div>
                         </div>
                         <p>His departure marked the beginning of a period of uncertainty about the direction of HMC. The <a target="_blank" href="http://www.thecrimson.com/article/2005/10/17/el-erian-to-lead-hmc-top-bond/">Corporation tapped Mohamed A. El-Erian</a>, a managing director at Pacific Investment Management Company with no ties to the University or experience with institutional funding, to succeed Meyer. But less than two years later, <a target="_blank" href="http://www.thecrimson.com/article/2007/9/11/endowment-chief-to-step-down-the/">El-Erian resigned his post</a> after leading HMC to a 23 percent return in FY 2007, throwing the company’s helm into disarray.</p> 
-
-                    
-
 
                         <p>On the eve of a global financial crisis, and while the University’s core leadership in Cambridge was being reshuffled as well, the high leadership turnover caused unwelcome variability at HMC. When Mendillo arrived as the <a target="_blank" href="http://www.thecrimson.com/article/2008/3/31/mendillo-to-return-to-hmc-after/">firm’s new permanent CEO</a> in July 2008 after six years managing the endowment at Wellesley College and over a decade at HMC before that, she found a firm still reeling from the repeated changes in management. </p>
 
@@ -143,8 +149,14 @@
 
                     </section>
                     <section>
+
+                        <a class="section-anchor" id="new-mandate"></a>
                         <h2 class="pt-serif highlight-trigger">A New Mandate, And New Tradeoffs</h2>
+
+                         <div class="showGraph"></div>
+
                         <p>The financial crisis had an immediate and lasting impact on all parts of Harvard, from HMC’s offices at the Boston Fed to the headquarters of the Faculty of Arts and Sciences in Harvard Yard. As University officials <a target="_blank" href="http://www.thecrimson.com/article/2009/5/11/fas-announces-broad-array-of-budget/">enacted painful budget cuts and staff reductions</a>, leadership began to rethink how to make HMC work for Harvard. </p>
+
 
                         <p>“It’s not that the right hand didn’t know what the left hand was doing, but it was a situation in which HMC could have had greater understanding of what the financial needs of the University were going to be, not just a year out but three or four years out,” Robert D. Reischauer ’63, the senior fellow of the Harvard Corporation, said in an April interview. </p>
 
@@ -152,10 +164,11 @@
 
                         <p>From the increased interactions between HMC and the Corporation has emerged a mandate that is unquestionably more conservative than the playbook Meyer followed.</p>
 
+
                         <div class="context-quote-wrapper context-quote-right">
                         <div class="context-quote">
                             <div class="context-quote-trigger"></div>
-                            <div class="context-quote-title">Jane L. Mendillo</div>
+                            <div class="context-quote-header"><img src=""><div class="context-quote-title"><div>Jane L. Mendillo</div></div></div>
                             <div class="context-quote-body">Jane L. Mendillo is the President and Chief Executive Officer of Harvard Management Company. Mendillo has led HMC since July 1, 2008. Before that, she managed the endowment of Wellesley College from 2002-2008 and was a manager at HMC from 1987-2001. Mendillo did her undergraduate work at Yale and holds an MBA from Yale’s School of Management. Mendillo has also worked in Yale’s investment office and at Bain and Company</div>
                             </div>
                         </div>
@@ -173,10 +186,16 @@
                         <p>“When you take cash that you’re not investing in what you think are the most ambitious possibilities, you are using it for a safety net,” Faust said in an interview in May. “That will have an effect on the performance of the endowment.”</p>
                     </section>
                     <section>
+
+                        <a class="section-anchor" id="campaign"></a>
                         <h2 class="pt-serif highlight-trigger">Ambitious Campaign, Average Returns</h2>
+
+                        <div id="showGraph"></div>
 
                         <p>HMC’s returns of late are modest compared to the company’s pre-crisis performance, but even so, <a target="_blank" href="http://www.hmc.harvard.edu/investment-management/performance-history.html">recent HMC annual reports</a> have emphasized the strength of the endowment’s recovery. And while a dollar donated to Harvard today may not yield the same astronomical returns that it would have two decades ago, many University supporters say they trust HMC’s record.</p>
 
+
+                        
                         <p>HMC’s public documentation since the crisis has encouraged this trust. Though the report for FY 2009 dwelled on the record losses that year, reports since then have focused on the recovery. In FY 2012 and FY 2013, HMC replaced its traditional five-year average annualized return metric with a three-year figure, which did not include the worst of the crisis. </p>
 
                         <p>“There was nothing nefarious about the timeframes we chose,” Mendillo said in her office this May. “I think people are more interested in what’s happened since [the crisis], so we thought when we looked at it that the one, three, 10, and 20 [year averages] were more interesting and meaningful numbers.”</p>
@@ -184,6 +203,7 @@
                         <p>Moreover, HMC has consistently emphasized its performance against internal benchmarks as a sign of success. But while Mendillo insists that beating the benchmarks is “not easily done and... not expected every year,” the company has exceeded its overarching internal benchmark in each of the last four fiscal years.</p>
 
                         <p>Speaking anonymously, some influential University supporters have criticized not only HMC’s post-crisis returns as frustratingly average, but also questioned the Company’s shift in reporting procedure and emphasis on internal benchmarks, which may not account for HMC’s size and access advantages with some asset classes, like private equity. Still, a larger chorus of prominent donors say they agree with Mendillo’s emphasis on the recent recovery and on HMC’s long-term strength. </p>
+
 
                         <p>Kenneth Lipper, a 1965 graduate of Harvard Law School and a former member of the Committee on University Resources, a group of Harvard’s top donors, said that while HMC has had down years, its long-term record is impressive. </p>
 

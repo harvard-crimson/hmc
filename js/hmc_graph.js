@@ -1,8 +1,20 @@
+$(document).ready(function() { 
+  /* Script used for smooth navigation */
+  $(".header-nav a").click(function(event) {
+    event.preventDefault();
+    var target = $(this).attr("href")
+    $("html, body").animate({
+      scrollTop: $(target).offset().top - $('header').outerHeight() + 60
+    }, 500);
+  });
+});
+
+
 var controller;
 $(document).ready(function () {
     controller = new ScrollMagic();
 
-        $(".context-quote-wrapper").each(function(index, element) {
+    $(".context-quote-wrapper").each(function(index, element) {
         var $quote = $(element).children('.context-quote');
         var tween;
         if ($(element).hasClass('context-quote-right'))
@@ -13,9 +25,8 @@ $(document).ready(function () {
                         .setTween(tween)
                         .addTo(controller);
     });
-
     height_top=$('#article-header').height();
-    var chart = new Highcharts.Chart({
+    chart = new Highcharts.Chart({
         plotOptions: {
             animation: false
         },
@@ -24,7 +35,7 @@ $(document).ready(function () {
             backgroundColor: 'rgba(255,255,255,0)',
             width: $(window).width(),
             height: $(window).height()-$('header').height(),//-$('#article-header').height()
-            animation: false
+            animation: false,
         },
         title: {
             text: 'Endowment Returns',
@@ -55,7 +66,7 @@ $(document).ready(function () {
             tickInterval: 10,
             gridLineColor:'rgba(0,0,0,.03)',
             title: {
-                text: 'Yearly Returns',
+                text: 'Return',
                 style: {
                     color: '#000'
                 }
@@ -112,67 +123,64 @@ $(document).ready(function () {
            220.0,
            false
         );   
+        chart.redraw();
     });
 
     setTimeout(function() {
         chart.setSize(
            $(window).width(), 
-           $(window).height()-$('#article-header').height(),
+           ($(window).height()-$('#article-header').height()),
            animation = false
         );
         chart.chartBackground.css({
             color: '#fff',
         });
+        chart.series[1].show();
+        chart.series[2].show();
         chart.redraw();
-        $('#graph').css('opacity',1);
+        $('#container').css('opacity',1);
+        
+
     }, 0);
-
+            
     $('#article').css('margin-bottom', 220.0 + 'px');
-    $('#article-header').css('height', '456px')
+    $('#article-header').css('height', '456px');
 
+<<<<<<< HEAD
+=======
+    $('.showGraph').waypoint(function() {
+        alert('bullshit');
+    });
+
+    var hasPlotBand = false;
+>>>>>>> 7e61368b66a598f956e9d9e331f74399506a604c
     var $button = $('#button');
 
     controller = new ScrollMagic();
 
-    var triggers = $(".highlight-trigger");
-
-    var bands = [[0,9.5],[0,4.5],[5.5,11.5],[10.5,13.5],[13.5,15.5],[10.5,17.5]];
-
-    var hasPlotBands = [false, false,false,false,false,false];
-
-    function create_event(index,trigger,remove) {
-        var scene = new ScrollScene({triggerElement: trigger, duration: 200})
-        .on("start", function (e) {
-                add = (controller.info("scrollDirection").toString() == "FORWARD" && !remove)||(controller.info("scrollDirection").toString() != "FORWARD" && remove)
-
-                if (add) {
+    var scene = new ScrollScene({triggerElement: "#container", duration: 200})
+        .on("start end", function (e) {
+                if (!hasPlotBand) {
                     chart.xAxis[0].addPlotBand({
+<<<<<<< HEAD
                         from: bands[index][0],
                         to: bands[index][1],
                         color: '#E0E0E0',
                         id: 'plot-band-'+index.toString()
+=======
+                        from: 5,
+                        to: 7,
+                        color: '#FCFFC5',
+                        id: 'plot-band-1'
+>>>>>>> 7e61368b66a598f956e9d9e331f74399506a604c
                     });
+                    $button.html('Remove plot band');
                 } else {
-                    chart.xAxis[0].removePlotBand('plot-band-'+index.toString());
+                    chart.xAxis[0].removePlotBand('plot-band-1');
                 }
-                hasPlotBands[index] = !hasPlotBands[index];
+                hasPlotBand = !hasPlotBand;
             })
         .addTo(controller);
-        return;
-    }
 
-    //iterate through the triggers and add in the toggling triggers
-    for (var i=0; i<7; i++)
-    {
-        trigger = triggers[i];
-        if (i!=0)
-        {
-            create_event(i-1,trigger,true);
-        }
-        if (i!=6)
-        {
-            create_event(i,trigger,false);
-        }
-    }
-
+        controller = new ScrollMagic();
 });
