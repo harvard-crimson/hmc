@@ -146,14 +146,45 @@ $(document).ready(function () {
     $('#article').css('margin-bottom', 220.0 + 'px');
     $('#article-header').css('height', '456px');
 
-    $('.showGraph').waypoint(function() {
-        console.log('up');
+    $('#showGraph-1').waypoint(function() {
+        console.log('1');
+        $('#container').highcharts().xAxis[0].addPlotBand({
+            from: 0,
+            to: 10 ,
+            id: 'plot-band',
+            color: '#FCFFC5',
+        });
         $('#container').stop().slideDown('slow');
     });
 
-    $('.hideGraph').waypoint(function(){
-        console.log('down');
+    $('#showGraph-2').waypoint(function() {
+        console.log('2');
 
+        $('#container').highcharts().xAxis[0].addPlotBand({
+            from: 12,
+            to: 14 ,
+            id: 'plot-band',
+            color: '#FCFFC5',
+        });
+        chart.redraw();
+        $('#container').stop().slideDown('slow');
+    });
+
+    $('#showGraph-3').waypoint(function() {
+        console.log('3');
+
+        $('#container').highcharts().xAxis[0].addPlotBand({
+            from: 14,
+            to: 17 ,
+            id: 'plot-band',
+            color: '#FCFFC5',
+        });
+        $('#container').stop().slideDown('slow');
+    });
+
+
+    $('.hideGraph').waypoint(function(){
+        $('#container').highcharts().xAxis[0].removePlotBand('plot-band');
         $('#container').stop().slideUp('slow');
     });
 
