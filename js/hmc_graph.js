@@ -2,7 +2,7 @@ var controller;
 $(document).ready(function () {
     controller = new ScrollMagic();
 
-        $(".context-quote-wrapper").each(function(index, element) {
+    $(".context-quote-wrapper").each(function(index, element) {
         var $quote = $(element).children('.context-quote');
         var tween;
         if ($(element).hasClass('context-quote-right'))
@@ -153,7 +153,4 @@ $(document).ready(function () {
         .addTo(controller);
 
         controller = new ScrollMagic();
-
-    
-
 });
