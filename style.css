@@ -515,8 +515,8 @@ header > h1 .pt-serif {
 }
 
 .context-quote {
-    /*background-color: rgba(0,0,0,0.05);*/
-    background-color: #F4FFEF;
+    background-color: rgba(9,81,105,0.07);
+    /*background-color: #F4FFEF;*/
     position: relative;
     opacity: 0;
     border: 1px solid #bbb;
@@ -561,11 +561,14 @@ header > h1 .pt-serif {
     font-size: 1.5em;
     text-align: center;
     background-color: rgba(186,6,0,0.8);
-    padding: 10px 5px;
-    font-family: 'Crimson', serif;
+    font-family: 'PT Serif', 'Crimson', serif;
     position: absolute;
     width: 100%;
     bottom: -4px;
+}
+
+.context-quote-title div {
+    padding: 10px 5px;
 }
 
 .context-quote-title-picless {
