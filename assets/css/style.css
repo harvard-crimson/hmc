@@ -12,6 +12,7 @@
 	   -moz-box-shadow: 0 0px 10px 0px black;
 	        box-shadow: 0 0px 10px 0px black;
 	z-index: 980;
+    max-height: 220px;
     margin: 0px;
     padding: 0px;
 }
