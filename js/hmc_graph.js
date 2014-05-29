@@ -14,6 +14,7 @@ $(document).ready(function () {
                         .addTo(controller);
     });
 
+    $('#container').data('clicked',true);
     height_top=$('#article-header').height();
     var chart = new Highcharts.Chart({
         plotOptions: {
@@ -24,7 +25,41 @@ $(document).ready(function () {
             backgroundColor: 'rgba(255,255,255,0)',
             width: $(window).width(),
             height: $(window).height()-$('header').height(),//-$('#article-header').height()
-            animation: false
+            animation: false,
+            events: {
+                click: function() {
+                    isClicked = $(this).data('clicked');
+                    if (isClicked ) {
+                        isClicked  = false;
+                    }
+                    else {
+                        isClicked = true;
+                    }
+                    $(this).data('clicked',isClicked);
+                    if (isClicked){
+                        chart.series[1].show();
+                        chart.series[2].show();
+                        chart.setSize(
+                            $(window).width(),
+                            $(window).height()-$('#article-header').height(),
+                            animation = {
+                                duration: 1000
+                            }
+                        );
+                    }
+                    else{
+                        chart.setSize(
+                            $(window).width(),
+                            ($(window).height()-$('#article-header').height())/2,
+                            animation = {
+                                duration: 1000
+                            }
+                        );                     
+                        chart.series[1].hide();
+                        chart.series[2].hide();
+                    }
+                }
+            }
         },
         title: {
             text: 'Endowment Returns',
@@ -113,22 +148,25 @@ $(document).ready(function () {
            false
         );   
     });
-
     setTimeout(function() {
         chart.setSize(
            $(window).width(), 
-           $(window).height()-$('#article-header').height(),
+           ($(window).height()-$('#article-header').height())/2,
            animation = false
         );
         chart.chartBackground.css({
             color: '#fff',
         });
+        chart.series[1].hide();
+        chart.series[2].hide();
         chart.redraw();
-        $('#graph').css('opacity',1);
-    }, 0);
+        $('#container').css('opacity',1);
+        
 
+    }, 0);
+            
     $('#article').css('margin-bottom', 220.0 + 'px');
-    $('#article-header').css('height', '456px')
+    $('#article-header').css('height', '456px');
 
     var hasPlotBand = false;
     var $button = $('#button');
