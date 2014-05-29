@@ -25,7 +25,6 @@ $(document).ready(function () {
                         .setTween(tween)
                         .addTo(controller);
     });
-
     $('#container').data('clicked',true);
     height_top=$('#article-header').height();
     var chart = new Highcharts.Chart({
@@ -38,46 +37,6 @@ $(document).ready(function () {
             width: $(window).width(),
             height: $(window).height()-$('header').height(),//-$('#article-header').height()
             animation: false,
-            events: {
-                click: function() {
-                    isClicked = $(this).data('clicked');
-                    if (isClicked ) {
-                        isClicked  = false;
-                    }
-                    else {
-                        isClicked = true;
-                    }
-                    $(this).data('clicked',isClicked);
-                    if (isClicked){
-                        chart.series[1].show();
-                        chart.series[2].show();
-                        chart.setSize(
-                            $(window).width(),
-                            $(window).height()-$('#article-header').height(),
-                            animation = {
-                                duration: 600
-                            }
-                        );
-                        chart.series[1].show();
-                        chart.series[2].show();
-                        chart.redraw();
-
-                    }
-                    else{
-                        chart.setSize(
-                            $(window).width(),
-                            ($(window).height()-$('#article-header').height())/2,
-                            animation = {
-                                duration: 600
-                            }
-                        );
-                        chart.series[1].hide();
-                        chart.series[2].hide();
-                        chart.redraw();
-
-                    }
-                }
-            }
         },
         title: {
             text: 'Endowment Returns',
@@ -179,18 +138,6 @@ $(document).ready(function () {
         chart.series[1].show();
         chart.series[2].show();
         chart.redraw();
-        setTimeout(function() {
-            chart.setSize(
-                $(window).width(),
-                ($(window).height()-$('#article-header').height())/2,
-                animation = {
-                    duration: 1000
-                }
-            );
-            chart.series[1].hide();
-            chart.series[2].hide();
-
-        }, 1500);
         $('#container').css('opacity',1);
         
 

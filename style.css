@@ -1,12 +1,14 @@
-#container, #container-bar {
-	position:fixed;
-	bottom:0;
+#container {
 	-webkit-box-shadow: 0 0px 10px 0px black;
 	   -moz-box-shadow: 0 0px 10px 0px black;
 	        box-shadow: 0 0px 10px 0px black;
 	z-index: 980;
-    margin: 0px;
     padding: 0px;
+    margin: 0px;
+    position:absolute;
+    left:0;
+    right:0;
+    display: inline-block;
 }
 
 body {
