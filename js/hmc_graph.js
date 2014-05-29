@@ -13,7 +13,6 @@ $(document).ready(function () {
                         .setTween(tween)
                         .addTo(controller);
     });
-
     $('#container').data('clicked',true);
     height_top=$('#article-header').height();
     var chart = new Highcharts.Chart({
@@ -52,13 +51,23 @@ $(document).ready(function () {
 
                     }
                     else{
-                        chart.setSize(
-                            $(window).width(),
-                            ($(window).height()-$('#article-header').height())/2,
-                            animation = {
-                                duration: 600
+                        var newHeight = $(window).height()-$('#article-header').height() / 2;
+                        var shrink = function() {
+                            if ($('#container').height() > newHeight)
+                            {
+                                chart.setSize(
+                                    $(window).width(),
+                                    $(window).height()-$('#article-header').height() - 10,
+                                    animation = false
+                                );
+                                chart.redraw();
+                            } else {
+                                clearInterval(shrink);
                             }
-                        );
+                        };
+
+                        setInterval(shrink, 60);
+
                         chart.series[1].hide();
                         chart.series[2].hide();
                         chart.redraw();
