@@ -34,7 +34,7 @@ $(document).ready(function () {
             renderTo: container,
             backgroundColor: 'rgba(255,255,255,0)',
             width: $(window).width(),
-            height: $(window).height()-$('header').height(),//-$('#article-header').height()
+            height: $('#container').height()-$('header').height(),//-$('#article-header').height()
             animation: false,
         },
         title: {
