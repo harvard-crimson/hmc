@@ -138,18 +138,24 @@ $(document).ready(function () {
         chart.series[1].show();
         chart.series[2].show();
         chart.redraw();
-        $('#container').css('opacity',1);
-        
 
+        $('#container').css('opacity',1);
+        $('#container').hide();
     }, 0);
             
     $('#article').css('margin-bottom', 220.0 + 'px');
     $('#article-header').css('height', '456px');
 
+    $('.showGraph').waypoint(function() {
+        console.log('up');
+        $('#container').stop().slideDown('slow');
+    });
 
-    // $('.showGraph').waypoint(function() {
-    //     alert('bullshit');
-    // });
+    $('.hideGraph').waypoint(function(){
+        console.log('down');
+
+        $('#container').stop().slideUp('slow');
+    });
 
 
     var triggers = $(".highlight-trigger");
@@ -173,7 +179,6 @@ $(document).ready(function () {
                 } else {
                     chart.xAxis[0].removePlotBand('plot-band-'+index.toString());
                 }
-                hasPlotBands[index] = !hasPlotBands[index];
             })
         .addTo(controller);
         return;
