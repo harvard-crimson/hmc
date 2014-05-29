@@ -1,3 +1,15 @@
+$(document).ready(function() { 
+  /* Script used for smooth navigation */
+  $(".header-nav a").click(function(event) {
+    event.preventDefault();
+    var target = $(this).attr("href")
+    $("html, body").animate({
+      scrollTop: $(target).offset().top - $('header').outerHeight() + 60
+    }, 500);
+  });
+});
+
+
 var controller;
 $(document).ready(function () {
     controller = new ScrollMagic();
