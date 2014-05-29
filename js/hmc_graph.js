@@ -129,7 +129,7 @@ $(document).ready(function () {
     setTimeout(function() {
         chart.setSize(
            $(window).width(), 
-           ($(window).height()-$('#article-header').height()),
+           ($(window).height()-$('#article-header').height()) + 50,
            animation = false
         );
         chart.chartBackground.css({
