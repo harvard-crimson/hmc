@@ -34,7 +34,7 @@ $(document).ready(function () {
             renderTo: container,
             backgroundColor: 'rgba(255,255,255,0)',
             width: $(window).width(),
-            height: $('#container').height()-$('header').height(),//-$('#article-header').height()
+            height: 220,//-$('#article-header').height()
             animation: false,
         },
         title: {
@@ -129,7 +129,7 @@ $(document).ready(function () {
     setTimeout(function() {
         chart.setSize(
            $(window).width(), 
-           ($(window).height()-$('#article-header').height()) + 50,
+           220,
            animation = false
         );
         chart.chartBackground.css({
